@@ -53,7 +53,7 @@ jobs:
     - name: Deploy to server
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} << 'EOF'
-          cd /home/uxyz/domains/sahkari.tech/public_html/cicddemo
+          cd /home/u742862596/domains/sahkari.tech/public_html/cicddemo
           git pull origin main
           composer install --no-dev
           php artisan migrate --force
