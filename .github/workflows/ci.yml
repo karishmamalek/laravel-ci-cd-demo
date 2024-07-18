@@ -55,6 +55,10 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Debug SSH
+        run: |
+          ssh -vvv -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} 'echo "SSH connection successful"'
+
       - name: Deploy to server
         env:
           USER: ${{ secrets.USER }}
