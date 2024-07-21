@@ -34,4 +34,4 @@ jobs:
           server: name_of_server.com
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /home/u742862596/domains/sahkari.tech/public_html/cicddemo
+          server-dir: /home/u742862596/domains/sahkari.tech/public_html/cicddemo/
