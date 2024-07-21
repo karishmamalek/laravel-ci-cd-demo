@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
@@ -24,10 +24,7 @@ jobs:
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
-
-      - name: Copy .env.example to .env
-        run: cp .env.example .env
-
+      
       - name: Generate application key
         run: php artisan key:generate
 
@@ -35,7 +32,7 @@ jobs:
         run: php artisan test
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
 
     steps:
